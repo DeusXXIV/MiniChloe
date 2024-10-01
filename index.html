@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Bootstrap Declarations-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--END OF Bootstrap Declarations-->
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" 
+    content="602115319183-37r7u5dcjm3v76ofrbp5a592ktuhdj5s.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chloe</title>
+
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        }
+        
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
+</head>
+
+<body class="bg-body">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid w-100">
+        <div class="mainLogo">
+            <a class="navbar-brand w-100" href="index.html">
+                <img class="w-100 img-fluid rounded-pill" src ="images/Chloe 2.jfif" alt="Chloe Logo">
+            </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto justify-content-center align-items-center mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="ReadingList.html">Reading List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-info text-dark fw-bold px-3" href="AddMedia.html">
+                            Add Media
+                    </a>
+                </li>   
+                <li class="nav-item">
+                    <a class="nav-link" href="Bookmarks.html">Bookmarks</a>
+                </li>   
+            </ul>
+
+            <ul class="navbar-nav ml-auto justify-content-center mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SignUp.html">Sign Up</a>
+                </li>   
+            </ul>
+        </div>
+    </div>
+</nav> 
+
+<section class="container-fluid d-flex flex-column justify-content-center align-items-center" id="indexMainSection">
+    <h1>Mini Chloe</h1>
+    <h2>Webtoon and Manga Reading Tracker</h2>
+
+    <!-- Add some margin to space the buttons -->
+    <div class="m-3">
+        <a href="AddMedia.html">
+            <button type="button" class="btn btn-primary">Add Media</button>
+        </a>
+        <a href="ReadingList.html" class="ms-2">
+            <button type="button" class="btn btn-secondary">View Reading List</button>
+        </a>
+    </div>
+</section>
+
+
+</body>
+
+
+
+<!--
+Project Specs:
+
+Description: This will be a smaller version of Chloe. It will be foucsed more on customized media tracking, 
+allowing the user to create entries, set the category of the media, and "bookmark" specific chapters/episodes 
+with a description of why. This mini chloe version will mostly focus on webtoons/manga, eventually be opening
+to other media, then eventually transitioned into the full chloe.
+
+Specific Features:
+1. Add Media feature.
+    a. Name
+    b. Category
+        a1. Manga
+        a2. Webtoon
+    c. Reading Status
+        a1. To Read
+        a2. Ongoing
+        a3. Completed
+    d. Descriptive Bookmark
+        a1. Bookmark Title
+        a2. Description of Bookmark
+        a3. Chapter/Episode of Bookmark
+        a4. Bookmark Classification
+            a4a. H-Scene
+            a4b. Epic Fight
+            a4c. Good Quote
+            a4d. Memorable Moment
+
+Implementation Plan:
+    1. Home page, Jumbotron homepage
+        Big buttons in middle:
+            a. Add Media
+            b. View Media List (New Page)
+                a1. Default sort by Name
+                a2. Option to sort by Category
+                a3. Sort by Reading Status
+                a4. Sort by Chapters Read
+            c. View Bookmarks (New Page)
+                a1. Default sort by name
+                a2. Option to sort by Category
+                a3. Sort by Reading Status
+                a4. Sort by Chapters Read
+
+
+Creation Process Flow:
+    Functionality First
+        1. HTML and Content
+        2. Database first
+        3. Functionality First
+        4. Layout
+        5. Design
+        6. Interactivity
+
+Design Tooltips
+    Middle NavBar
+    Adding Media will be using Modal
+-->
+</html>
+
