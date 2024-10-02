@@ -71,6 +71,57 @@
     </nav> 
 -->
 
+<section class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+    <div class="text-center bg-light border border-dark rounded-2 p-5 shadow" style="max-width: 1200px;">
+        <p class="display-4 mb-5">Add Bookmark</p>
+
+        <form action="#" method="post">
+            <div class="row g-4 mb-4">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Tower of God">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select" id="Category" aria-label="Category">
+                            <option value="1">Manga</option>
+                            <option value="2">Webtoon</option>
+                        </select>
+                        <label for="Category">Category</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="ChaptersRead" placeholder="Chapters Read">
+                        <label for="ChaptersRead">Chapters Read</label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select" id="ReadingStatus" aria-label="ReadingStatus">
+                            <option value="toread">To Read</option>
+                            <option value="ongoing">Currently Reading</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                        <label for="ReadingStatus">Reading Status</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
 
 </body>
 </html>
