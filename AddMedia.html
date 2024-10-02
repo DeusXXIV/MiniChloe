@@ -9,6 +9,8 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" 
         content="602115319183-37r7u5dcjm3v76ofrbp5a592ktuhdj5s.apps.googleusercontent.com">
+
+        <link rel="stylesheet" href="stylesheet.css">
     
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,43 +35,72 @@
         </script>
     </head>
 <body>
-    <nav>
-        <a href="index.html">HomeBrand</a>
-        <ul>
-            <li>
-                <a href="ReadingList.html">Reading List</a>
-            </li>
-            <li>
-                <a href="#">Add Media</a>
-            </li>
-            <li>
-                <a href="Bookmarks.html">Bookmarks</a>
-            </li>
-        </ul>
-
-        <ul>
-            <li>
-                <a href="Login.html">Login</a>
-            </li>
-            <li>
-                <a href="Signup.html">SignUp</a>
-            </li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid w-100">
+            <div class="mainLogo">
+                <a class="navbar-brand w-100" href="index.html">
+                    <img class="w-100 img-fluid rounded-pill" src ="images/Chloe 2.jfif" alt="Chloe Logo">
+                </a>
+            </div>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto justify-content-center align-items-center mb-2 mb-lg-0 gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ReadingList.html">Reading List</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bookmarks.html">Bookmarks</a>
+                    </li>   
+                </ul>
+    
+                <ul class="navbar-nav ml-auto justify-content-center mb-2 mb-lg-0 gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SignUp.html">Sign Up</a>
+                    </li>   
+                </ul>
+            </div>
+        </div>
+    </nav> 
 
     <section>
-        <h1>Add Media</h1>
+        <p class="h1">
+            Add Media
+        </p>
 
         <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <input type="submit" value="Submit">
+            <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="Tower of God">
+                    <label for="name">Name</label>
+                  </div>
+                </div>
+<!--
+                <label for="Category">Category:</label>
+                <select class="form-select" aria-label="Category" name="Category" id="Category">
+                    <option value="manga">Manga</option>
+                    <option value="webtoon">Webtoon</option>
+                </select>
+-->
+                <div class="col-md">
+                  <div class="form-floating">
+                    <select class="form-select" id="Category" aria-label="Category">
+                      <option value="1">Manga</option>
+                      <option value="2">Webtoon</option>
+                    </select>
+                    <label for="Category">Category</label>
+                  </div>
+                </div>
+              </div>
 
-            <label for="Category">Category:</label>
-            <select name="Category" id="Category">
-                <option value="manga">Manga</option>
-                <option value="webtoon">Webtoon</option>
-            </select>
+        
 
             <label for="ReadingStatus">Reading Status:</label>
             <select name="ReadingStatus" id="ReadingStatus">
